@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Y</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">Y</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "About", about_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Contact", contact_path, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p>&copy; 2024 Y. Todos los derechos reservados.</p>
+      </div>
+      <div class="col">
+        <ul class="list-unstyled list-inline social-media-links">
+          <li class="list-inline-item"><a href="#">Facebook</a></li>
+          <li class="list-inline-item"><a href="#">Twitter</a></li>
+          <li class="list-inline-item"><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+</body>
+</html>
